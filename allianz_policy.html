@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>وثيقة أليانز لتأمينات الحياة - 4529730</title>
+<style>
+  /* ════════ SHARED BASE ════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    color: #222;
+    background: #e9eef0;
+    direction: rtl;
+  }
+
+  :root {
+    --blue:   #003781;
+    --light-blue: #e8eff8;
+    --teal:   #00a0b0;
+    --orange: #f36f21;
+    --red:    #d0021b;
+    --gray:   #666;
+    --border: #ccc;
+    --row-bg: #f5f8fc;
+
+    /* page 2/3 specific */
+    --allianz-blue:#006192;
+    --allianz-dark:#003781;
+    --teal2:#7fb3b8;
+    --teal-light:#cfe2e3;
+    --teal-head:#0a7c86;
+    --grey-line:#b9c4c9;
+    --label:#5a6b72;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 14px auto;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  /* ════════ PRINT ════════ */
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    body { background: #fff; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+    .no-print { display: none !important; }
+  }
+
+  /* ════════════════════════════════════════
+     PAGE 1 STYLES (from pasted document)
+  ════════════════════════════════════════ */
+  .page.p1 { padding: 14mm 14mm 12mm; }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .logo-block { display: flex; flex-direction: column; gap: 2px; }
+  .logo-allianz {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--blue);
+    letter-spacing: -0.5px;
+  }
+  .logo-allianz span { color: var(--red); }
+  .logo-sub {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 600;
+  }
+  .product-badge {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--orange);
+    letter-spacing: 1px;
+  }
+  .product-badge .watheqa { color: var(--orange); font-size: 18px; }
+
+  .policy-number-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .policy-number-bar .pn-label {
+    background: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+  .policy-number-bar .pn-value {
+    background: var(--light-blue);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 14px;
+    border: 1px solid var(--blue);
+  }
+
+  .letter-body {
+    line-height: 2;
+    font-size: 13px;
+    color: #222;
+    margin-bottom: 14px;
+  }
+  .letter-body p { margin-bottom: 8px; }
+  .letter-body .greeting { font-weight: 700; font-size: 15px; margin-bottom: 12px; }
+  .letter-body .link { color: var(--blue); font-weight: 600; }
+  .letter-body .list-item { padding-right: 12px; }
+  .letter-body .list-item::before { content: '– '; }
+
+  .qr-row {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  .qr-box {
+    width: 100px; height: 100px;
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: var(--gray);
+    border-radius: 6px;
+  }
+
+  .sig-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .sig-block { text-align: center; }
+  .sig-name { font-weight: 700; font-size: 13px; color: var(--blue); }
+  .sig-title { font-size: 11px; color: var(--gray); line-height: 1.5; }
+  .sig-line { border-top: 1.5px solid #222; width: 120px; margin: 6px auto 4px; }
+
+  .stamp-placeholder {
+    width: 90px; height: 90px;
+    border: 2px dashed var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: var(--gray);
+  }
+  .slogan {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1.3;
+  }
+
+  /* ════════════════════════════════════════
+     PAGE 2 / 3 STYLES (from current version)
+  ════════════════════════════════════════ */
+  .page.p23 { padding: 22mm 18mm; }
+
+  .doc-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:26px;
+  }
+  .brand-side{display:flex;flex-direction:column;}
+  .brand-line{
+    color:var(--allianz-blue);
+    font-weight:700;
+    font-size:18px;
+    margin-bottom:14px;
+  }
+  .product-name{
+    color:var(--teal-head);
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+  }
+  .allianz-logo{
+    display:flex;
+    align-items:center;
+  }
+  .logo-placeholder{
+    width:150px;height:46px;
+    border:2px dashed var(--border);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;color:var(--gray);font-weight:600;
+  }
+  .ref-table{margin-top:14px;}
+  .ref-row{display:flex;align-items:center;justify-content:flex-start;margin-bottom:8px;gap:10px;direction:ltr;}
+  .ref-row .rlabel{order:2;color:var(--allianz-blue);font-size:14px;font-weight:600;white-space:nowrap;}
+  .ref-row .rbox{
+    order:1;
+    border:1px solid #9bb0c2;
+    min-width:160px;
+    text-align:center;
+    padding:5px 12px;
+    direction:ltr;
+    font-size:14px;
+  }
+
+  .section-title{
+    display:flex;align-items:center;gap:12px;
+    color:var(--allianz-blue);
+    font-weight:700;font-size:21px;
+    margin:24px 0 4px;
+  }
+  .sec-icon{
+    width:42px;height:42px;border:2px solid var(--allianz-blue);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--allianz-blue);font-size:20px;flex:0 0 auto;
+  }
+
+  .contractor-box{
+    display:flex;
+    background:var(--teal-light);
+    border:1px solid var(--teal2);
+  }
+  .contractor-icon{
+    background:#fff;
+    width:120px;flex:0 0 120px;
+    display:flex;align-items:center;justify-content:center;
+    border-left:1px solid var(--teal2);
+  }
+  .contractor-icon .ic{
+    width:60px;height:60px;border:2px solid var(--allianz-blue);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--allianz-blue);font-size:26px;
+  }
+  .contractor-side{
+    width:200px;flex:0 0 200px;
+    color:var(--allianz-blue);font-weight:700;font-size:18px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    line-height:1.5;
+  }
+  .contractor-data{flex:1;padding:14px 18px;}
+  .cdata-row{display:flex;justify-content:space-between;font-size:14px;padding:5px 0;}
+  .cdata-row .k{font-weight:700;color:#234;}
+  .cdata-row .v{color:#345;unicode-bidi:plaintext;text-align:left;}
+  .cdata-row .v.rtl{text-align:left;}
+
+  .detail-rows{margin-top:6px;}
+  .drow{
+    display:flex;
+    border-bottom:1px solid var(--grey-line);
+    font-size:14px;
+    padding:9px 4px;
+  }
+  .drow .cell{flex:1;display:flex;gap:8px;align-items:center;justify-content:flex-start;}
+  .drow .lab{color:var(--label);font-weight:600;white-space:nowrap;}
+  .drow .dat{color:#222;unicode-bidi:plaintext;text-align:right;}
+
+  .prem-table{
+    border-collapse:collapse;
+    width:330px;
+    margin-top:10px;
+    font-size:14px;
+  }
+  .prem-table td{
+    border:1px solid var(--teal2);
+    padding:7px 12px;
+  }
+  .prem-table td.plabel{
+    background:var(--teal-light);
+    font-weight:600;color:#234;
+    text-align:right;
+  }
+  .prem-table td.amount{
+    text-align:center;direction:ltr;width:110px;
+  }
+  .add-tax{font-weight:700;font-size:14px;margin:16px 0;}
+  .notes-block{margin-bottom:18px;}
+  .notes-title{color:#234;font-weight:700;font-size:16px;margin-bottom:8px;}
+  .notes-block ol{padding-right:20px;font-size:13.5px;line-height:1.9;color:#333;}
+  .issued{color:var(--allianz-blue);font-size:14px;text-align:center;margin-top:20px;line-height:1.8;}
+  .p3-layout{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;}
+  .p3-right{flex:1;}
+
+  .signature-block{ text-align:center; }
+  .stamp{
+    width:120px;height:78px;
+    border:1px solid var(--grey-line);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:6px;
+  }
+  .sig-name2{font-weight:700;font-size:14px;}
+  .sig-role{font-size:12px;color:var(--label);}
+  .sig-mark{font-size:22px;color:#0a3a6b;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     PAGE 1  –  Cover Letter (from pasted document)
+════════════════════════════════════════ -->
+<div class="page p1">
+
+  <div class="header">
+    <div class="policy-number-bar">
+      <span class="pn-label">وثيقة رقم</span>
+      <span class="pn-value">4529730</span>
+    </div>
+    <div style="text-align:left;">
+      <div class="product-badge"><span class="watheqa">وثيقة  &nbsp;</span>E-life</div>
+    </div>
+  </div>
+
+  <div class="letter-body">
+    <p class="greeting">عميل اليانز العزيز،</p>
+
+    <p>
+      نشكرك لاختيارك شركة أليانز لتأمينات الحياة - مصر كشريكك التأميني، والتي تعتز بريادتها وسجلها الحافل في سوق التأمين المصري حيث تقدم خدمات تأمين شاملة ومتكاملة للشركات والأفراد بما تتناسب مع احتياجات السوق المحلي القائمة على الخبرة العالمية.
+    </p>
+
+    <p>يسعدنا إرفاق الوثيقة الخاصة بك والتي تتكون من الآتي:</p>
+    <p class="list-item">شروط وبنود وثيقة التأمين على الحياة</p>
+    <p class="list-item">جدول الوثيقة المتضمن التفاصيل الخاصة بوثيقتك</p>
+
+    <p>برجاء قراءة المرفقات بدقة وعناية والتأكد من الوثيقة قد تم إصدارها بناءً على الطلب المقدم من سيادتكم.</p>
+
+    <p>في حال وجود أي استفسار بخصوص وثيقة التأمين على الحياة الخاصة بك، برجى التواصل بأي من الطرق التالية:</p>
+    <p class="list-item">من خلال زيارة أي من فروع الشركة خلال مواعيد العمل الرسمية من الساعة <strong>09:00</strong> صباحًا إلى <strong>05:00</strong> مساءً</p>
+    <p class="list-item">عبر الاتصال على الخط الساخن <strong>19909</strong> — احنا ظهرك مهما قابلك</p>
+
+    <p>
+      يمكنك الاطلاع ومتابعة الوثيقة الخاصة بك في أي وقت من خلال تسجيلك لحساب شخصي على بوابة عملاء أليانز الإلكترونية من:
+    </p>
+    <p style="text-align:center;">
+      <a class="link" href="https://apps.allianz.com.eg/CustomerPortal">https://apps.allianz.com.eg/CustomerPortal</a>
+    </p>
+
+    <p>أو من خلال تسجيلك لحساب شخصي على تطبيق الهاتف، حيث يمكنك تحميل التطبيق باستخدام الكود أدناه:</p>
+  </div>
+
+  <div class="qr-row">
+    <div class="qr-box">QR Code</div>
+  </div>
+
+  <div class="sig-row">
+    <div class="slogan">احنا ظهرك<br>مهما قابلك</div>
+   
+  </div>
+
+</div><!-- /page 1 -->
+
+
+<!-- ════════════════════════════════════════
+     PAGE 2  –  Policy Schedule (from current version)
+════════════════════════════════════════ -->
+<div class="page p23">
+  <div class="doc-header">
+    <div>
+      <div class="allianz-logo">
+        <div class="logo-placeholder">Allianz Logo</div>
+      </div>
+      <div class="ref-table">
+        <div class="ref-row"><span class="rlabel">طلب التأمين رقم</span><span class="rbox">1226061</span></div>
+        <div class="ref-row"><span class="rlabel">وثيقة رقم</span><span class="rbox">4529730 / Q03</span></div>
+      </div>
+    </div>
+    <div class="brand-side">
+      <div class="brand-line">أليانز لتأمينات الحياة - مصر</div>
+      <div class="product-name">لايف إيزى</div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="sec-icon">☰</span>جدول الوثيقة</div>
+
+  <div class="contractor-box">
+    <div class="contractor-icon"><div class="ic">☰</div></div>
+    <div class="contractor-side">بيانات المتعاقد<br>والمؤمن عليه</div>
+    <div class="contractor-data">
+      <div class="cdata-row"><span class="k">اسم المتعاقد (المؤمن عليه):</span><span class="v rtl">الأستاذ/ ?????</span></div>
+      <div class="cdata-row"><span class="k">تاريخ الميلاد:</span><span class="v">01/01/1978</span></div>
+      <div class="cdata-row"><span class="k">الجنس:</span><span class="v rtl">ذكر</span></div>
+      <div class="cdata-row"><span class="k">السن:</span><span class="v rtl">44 سنة</span></div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="sec-icon">☰</span>بيانات الوثيقة</div>
+  <div class="detail-rows">
+    <div class="drow">
+      <div class="cell"><span class="lab">تاريخ بدء التأمين:</span><span class="dat">2021 / 04 / 27</span></div>
+      <div class="cell"><span class="lab">تاريخ انتهاء التأمين:</span><span class="dat">2043 / 04 / 27</span></div>
+    </div>
+    <div class="drow">
+      <div class="cell"><span class="lab">مدة الوثيقة:</span><span class="dat rtl">21 سنة</span></div>
+      <div class="cell"><span class="lab">العملة:</span><span class="dat rtl">جنيه مصري</span></div>
+    </div>
+    <div class="drow">
+      <div class="cell"><span class="lab">التغطيات التأمينية:</span><span class="dat rtl">التغطية الأساسية في حالة الوفاة</span></div>
+      <div class="cell"><span class="lab">مبلغ التأمين:</span><span class="dat">300000</span></div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="sec-icon">☰</span>المستفيدين</div>
+  <div class="detail-rows">
+    <div class="drow">
+      <div class="cell"><span class="lab">اسم المستفيد الاول</span></div>
+      <div class="cell"><span class="dat rtl">تاليا علاء ناجى المغاورى</span></div>
+    </div>
+    <div class="drow">
+      <div class="cell"><span class="lab">صلة القرابة بالمؤمن عليه:</span><span class="dat rtl">الابنة</span></div>
+      <div class="cell"><span class="lab">تاريخ الميلاد:</span><span class="dat">2019/11/25</span></div>
+      <div class="cell"><span class="lab">النسبة المعينة:</span><span class="dat">100 %</span></div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="sec-icon">☰</span>الأقساط الدورية</div>
+  <div class="detail-rows">
+    <div class="drow">
+      <div class="cell"><span class="lab">دورية دفع الأقساط:</span><span class="dat rtl">سنوي</span></div>
+      <div class="cell"><span class="lab">القسط السنوي:</span><span class="dat">113.03</span></div>
+    </div>
+    <div class="drow">
+      <div class="cell"><span class="lab">طريقة دفع الأقساط:</span><span class="dat rtl">بوابة عملاء اليانز الالكترونية</span></div>
+      <div class="cell"><span class="lab">مدة دفع الأقساط:</span><span class="dat">15</span></div>
+    </div>
+  </div>
+</div><!-- /page 2 -->
+
+
+<!-- ════════════════════════════════════════
+     PAGE 3  –  Premium Breakdown & Notes (from current version)
+════════════════════════════════════════ -->
+<div class="page p23">
+  <div class="doc-header">
+    <div>
+      <div class="allianz-logo">
+        <div class="logo-placeholder">Allianz Logo</div>
+      </div>
+      <div class="ref-table">
+        <div class="ref-row"><span class="rlabel">طلب التأمين رقم</span><span class="rbox">1226061</span></div>
+        <div class="ref-row"><span class="rlabel">وثيقة رقم</span><span class="rbox">4529730 / Q03</span></div>
+      </div>
+    </div>
+     <div class="brand-side">
+      <div class="brand-line">أليانز لتأمينات الحياة - مصر</div>
+      <div class="product-name">لايف إيزى</div>
+    </div>
+  </div>
+
+  <div class="p3-layout">
+    <div style="flex:1;">
+      <div class="notes-block">
+        <div class="notes-title">*ملاحظات هامة</div>
+        <ol>
+          <li>من المعلوم والمتفق عليه صراحة انه يتم اصدار الوثيقة دون الحاجة الي توقيع المتعاقد (المؤمن عليه) بموجب الموافقة على الاقرارات بطلب التأمين الالكتروني.</li>
+          <li>برجاء زيارة الموقع الرسمي للشركة للحصول و الإطلاع على دليل حماية المتعاملين الصادر عن الهيئة العامة للرقابة المالية.</li>
+        </ol>
+      </div>
+
+      <div class="issued">
+        صدرت الوثيقة من نسختين عن<br>
+        شركة أليانز لتامينات الحياة - مصر
+      </div>
+
+   
+    </div>
+    <div class="p3-right">
+      <table class="prem-table">
+        <tr><td class="plabel">القسط الدوري</td><td class="amount">15000.00</td></tr>
+        <tr><td class="plabel">نصف دمغة نسبية</td><td class="amount">75.00</td></tr>
+        <tr><td class="plabel">رسم إشراف ورقابة</td><td class="amount">37.50</td></tr>
+        <tr><td class="plabel">خدمات اعتماد وتعديل الوثائق</td><td class="amount">15.00</td></tr>
+        <tr><td class="plabel">صندوق ضمان حملة الوثائق</td><td class="amount">30.00</td></tr>
+        <tr><td class="plabel">إجمالى القسط الدورى</td><td class="amount">15157.50</td></tr>
+        <tr><td class="plabel">إجمالى القسط الدورى الأول</td><td class="amount">15157.50</td></tr>
+      </table>
+      <div class="add-tax">تضاف إلى الأقساط السنوية الضرائب والرسوم التي تفرضها الجهات الحكومة</div>
+
+      <div class="ref-table" style="max-width:330px;">
+        <div class="ref-row" style="justify-content:flex-start;"><span class="rlabel">طلب التأمين رقم</span><span class="rbox" style="flex:1;">1226061</span></div>
+        <div class="ref-row" style="justify-content:flex-start;"><span class="rlabel">وثيقة رقم</span><span class="rbox" style="flex:1;">4529730 / Q03</span></div>
+      </div>
+    </div>
+
+    
+  </div>
+</div><!-- /page 3 -->
+
+</body>
+</html>
