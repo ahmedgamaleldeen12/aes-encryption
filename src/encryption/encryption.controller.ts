@@ -1,6 +1,8 @@
 import { BadRequestException, Body, Controller, Post } from '@nestjs/common';
 import {
   ApiBadRequestResponse,
+  ApiBody,
+  ApiConsumes,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
@@ -26,5 +28,24 @@ export class EncryptionController {
       throw new BadRequestException('"text" must be a non-empty string');
     }
     return { encrypted: this.encryptionService.encrypt(body.text) };
+  }
+
+  @Post('encrypt-raw')
+  @ApiOperation({
+    summary: 'Encrypt a raw HTML/text body using AES-128-CBC',
+    description:
+      'Send the content as-is (Content-Type: text/html or text/plain) — no JSON escaping needed. Returns the Base64-encoded ciphertext.',
+  })
+  @ApiConsumes('text/html', 'text/plain')
+  @ApiBody({ schema: { type: 'string', example: '<section>…</section>' } })
+  @ApiOkResponse({ type: EncryptResponseDto })
+  @ApiBadRequestResponse({ description: 'Body must be non-empty text' })
+  encryptRaw(@Body() body: unknown): EncryptResponseDto {
+    if (typeof body !== 'string' || body.length === 0) {
+      throw new BadRequestException(
+        'Body must be non-empty text sent with Content-Type text/html or text/plain',
+      );
+    }
+    return { encrypted: this.encryptionService.encrypt(body) };
   }
 }
